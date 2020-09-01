@@ -7,6 +7,8 @@ export default function useMedia(queries, values, defaultValue) {
     const handler = () => set(match)
     window.addEventListener('resize', handler)
     return () => window.removeEventListener(handler)
+
+    // eslint-disable-next-line
   }, []);
   return value
 }
